@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 const Login = ({ onLogin }) => {
   const navigate = useNavigate();
 
-  const handleLogin = () => { //!
-    onLogin();
+  const handleLogin = () => {
+    onLogin(true);
     navigate("/about");
   };
 
   return (
     <div>
       <h2>Login</h2>
-      <button onClick={handleLogin}>로그인</button> //!
+      <button onClick={handleLogin}>로그인</button>
     </div>
   );
 };

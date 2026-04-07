@@ -8,7 +8,7 @@ import NotFound from "./NotFound";
 import PrivateRoute from "./PrivateRoute";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false); //!
+  const [isAuth, setIsAuth] = useState(false);
 
   return (
     <div>
@@ -24,7 +24,7 @@ function App() {
           element={
             <PrivateRoute
               isAuthenticated={isAuth}
-              onLogin={() => setIsAuth(true)} //!
+              onLogin={setIsAuth}
             />
           }
         >
